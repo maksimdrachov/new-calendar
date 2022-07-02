@@ -11,3 +11,25 @@ source my_emv/bin/activate
 pip install -r requirements.txt
 django-admin startproject eventcalendar .
 ```
+
+Create app for calendar:
+
+```
+python manage.py startapp calendarapp
+python manage.py makemigrations
+python manage.py migrate
+```
+
+Add to installed apps (in `settings.py`):
+
+```python
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'calendarapp.apps.CalendarappConfig',
+]
+```
