@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'calendarapp.apps.CalendarappConfig',
+    'calendarapp',
 ]
 ```
 
@@ -78,6 +78,8 @@ from .models import Event
 
 admin.site.register(Event)
 ```
+
+Create a view in eventcalendar:
 
 
 
